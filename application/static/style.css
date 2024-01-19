@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: full;
+    margin: 5px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#makeupRecommendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.makeup-item {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.makeup-item:hover {
+    transform: scale(1.05);
+}
+
+.makeup-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.makeup-item strong {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.makeup-item span {
+    font-size: 14px;
+    color: #666;
+}
+
+.makeup-item a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.category-container{
+    display:flex;
+    flex-wrap: wrap;
+}

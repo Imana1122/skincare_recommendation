@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <h1>Skin Concern Predictor</h1>
+    
+    <form id="concernForm">
+        <h2>Skin Concerns</h2>
+        <label><input type="checkbox" name="normal" value="normal"> Normal</label>
+        <label><input type="checkbox" name="dry" value="dry"> Dry</label>
+        <label><input type="checkbox" name="oily" value="oily"> Oily</label>
+        <label><input type="checkbox" name="combination" value="combination"> Combination</label>
+        <label><input type="checkbox" name="acne" value="acne"> Acne</label>
+        <label><input type="checkbox" name="sensitive" value="sensitive"> Sensitive</label>
+        <label><input type="checkbox" name="fine lines" value="fine lines"> Fine Lines</label>
+        <label><input type="checkbox" name="wrinkles" value="wrinkles"> Wrinkles</label>
+        <label><input type="checkbox" name="redness" value="redness"> Redness</label>
+        <label><input type="checkbox" name="dull" value="dull"> Dull</label>
+        <label><input type="checkbox" name="pore" value="pore"> Pore</label>
+        <label><input type="checkbox" name="pigmentation" value="pigmentation"> Pigmentation</label>
+        <label><input type="checkbox" name="blackheads" value="blackheads"> Blackheads</label>
+        <label><input type="checkbox" name="whiteheads" value="whiteheads"> Whiteheads</label>
+        <label><input type="checkbox" name="blemishes" value="blemishes"> Blemishes</label>
+        <label><input type="checkbox" name="dark circles" value="dark circles"> Dark Circles</label>
+        <label><input type="checkbox" name="eye bags" value="eye bags"> Eye Bags</label>
+        <label><input type="checkbox" name="dark spots" value="dark spots"> Dark Spots</label>
+
+        <h2>Skin Tone: <span id="tone">{{ tone }}</span></h2>
+        <h2>Skin Type: <span id="skin-type">{{ skin_type }}</span></h2>        
+        <h2>Acne Type: <span id="acne-type">{{ acne_type }}</span></h2>
+        
+        <button type="button" onclick="getRecommendations(event, '{{ skin_type }}', '{{ tone }}')">Recommend</button>
+    </form>
+
+    <div id="recommendation-results">
+        
+    </div>
+    <div id="skincare-recommendations"></div>
+    <div id="makeup-recommendations"></div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

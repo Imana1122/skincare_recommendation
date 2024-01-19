@@ -1,9 +1,9 @@
 import tensorflow as tf
 
 print('Loading model ...')
-model = tf.keras.models.load_model('saved_model')
+model = tf.keras.models.load_model(r'C:\Users\imana\CW AI\Skyn\application\models\skin_model')
 
-class_names = ['Low','Moderate','Severe']
+class_names = ['Very Low','Low','Moderate','Severe']
 
 def load_and_prep_image(filename, img_shape=224):
   img = tf.io.read_file(filename)
